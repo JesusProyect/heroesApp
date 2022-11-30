@@ -4,7 +4,10 @@
         <mat-card-subtitle>{{ heroe.alter_ego }}</mat-card-subtitle>
     </mat-card-header>
 
-    <img mat-card-image [src]="heroe | imagen">
+    <img mat-card-image 
+         [src]="heroe | imagen"
+         (error)="imgDefault( $event )"
+         >
 
     <mat-card-content>
         <h3>{{ heroe.publisher }}</h3>
@@ -24,7 +27,7 @@
         <button mat-button
                 color="info"
                 routerLink="../editar/{{heroe.id}}">
-            editar
+            Editar
         </button>
     </mat-card-actions>
 

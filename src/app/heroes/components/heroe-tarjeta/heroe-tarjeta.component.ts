@@ -16,4 +16,8 @@ export class HeroeTarjetaComponent {
 
  @Input() heroe!: Heroe;
 
+ imgDefault( event: any ){
+  event.target.src = 'assets/no-image.png';
+}
+
 }
